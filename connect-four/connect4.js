@@ -25,9 +25,9 @@ function switchCurrPlayer() {
 function makeBoard() {
   console.log("making a board with starter object");
 
-  for (let i = 0; i < HEIGHT; i++) {
+  for (let y = 0; y < HEIGHT; y++) {
     const row = Array(WIDTH).fill(null);
-    gameState.board.push(row);
+    gameState.board[y] = row;
   }
 }
 
@@ -35,22 +35,22 @@ function makeBoard() {
 // console.log(gameState);
 
 
-/** findSpotInCol: given column x, return y coordinate of furthest-down spot
- *    (return null if filled)
- *  1) at user click on a column (essentially the inner array index), find out which row
- *    (outer array index) is not null
- *  2) check if outer array index - 1 (that would be the previous row) is > 0
- *  3) if yes, return outer index
- */
-
-// finds the lowest empty spot in the game board and returns the y coordinate
-// (or null if the column is filled).
+/** findSpotInCol: given column x, return y coordinate of furthest-down spot */
 
 function findSpotInCol(x) {
-  // TODO: write the real version of this, rather than always returning 5
-  return 5;
-}
+  console.log("findSpotInCol", { x });
 
+  const lastMoveIndex = gameState.board.findIndex((row) => row[x] !== null);
+
+  switch(lastMoveIndex) {
+    case -1:
+      return gameState.board.length - 1;
+    case 0:
+      return null;
+  }
+
+  return lastMoveIndex - 1;
+}
 
 /** checkForWin: check board cell-by-cell for "does a win start here?" */
 
