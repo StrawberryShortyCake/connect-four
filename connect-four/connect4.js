@@ -37,7 +37,14 @@ function makeBoard() {
 
 /** findSpotInCol: given column x, return y coordinate of furthest-down spot
  *    (return null if filled)
+ *  1) at user click on a column (essentially the inner array index), find out which row
+ *    (outer array index) is not null
+ *  2) check if outer array index - 1 (that would be the previous row) is > 0
+ *  3) if yes, return outer index
  */
+
+// finds the lowest empty spot in the game board and returns the y coordinate
+// (or null if the column is filled).
 
 function findSpotInCol(x) {
   // TODO: write the real version of this, rather than always returning 5
