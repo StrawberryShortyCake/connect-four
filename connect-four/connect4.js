@@ -35,8 +35,6 @@ function switchCurrPlayer() {
 function makeBoard() {
   console.log("makeBoard Running");
 
-  // TODO: set "board" to empty HEIGHT x WIDTH matrix array
-  // Row Array(WIDTH).fill()
   const board = [];
   const row = Array(WIDTH).fill(null)
 
