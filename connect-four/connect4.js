@@ -23,6 +23,15 @@ function switchCurrPlayer() {
 }
 
 
+/** GOAL: at page load, we create an array of arrays that is shown on page
+ * -> use width & height global consts
+ *  1) at page load, call makeBoard() -> this f(x) has to be in html
+ *  2) height = number of arrays in outer array
+ *  3) width = number of elements in each inner array
+ *  4) once this grid is created, return it
+ * -> output array
+ */
+
 function makeBoard() {
   // TODO: set "board" to empty HEIGHT x WIDTH matrix array
 }
