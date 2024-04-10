@@ -22,21 +22,18 @@ function switchCurrPlayer() {
   // TODO: switch currPlayer 1 <-> 2
 }
 
-
-/** GOAL: at page load, we create an array of arrays that is shown on page
- * -> use width & height global consts
- *  1) at page load, call makeBoard() -> this f(x) has to be in html
- *  2) height = number of arrays in outer array
- *  3) width = number of elements in each inner array
- *  4) once this grid is created, return it
- * -> output array
- */
-
 function makeBoard() {
-  console.log("making a board with starter const");
-  gameState.board.fill(Array(WIDTH).fill(null));
+  console.log("making a board with starter object");
 
+  for (let i = 0; i < HEIGHT; i++) {
+    const row = Array(WIDTH).fill(null);
+    gameState.board.push(row);
+  }
 }
+
+// makeBoard();
+// console.log(gameState);
+
 
 /** findSpotInCol: given column x, return y coordinate of furthest-down spot
  *    (return null if filled)

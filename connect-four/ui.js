@@ -28,8 +28,6 @@ function makeHtmlBoard() {
   $htmlBoard.append($top);
 
   // dynamically creates the main part of html board
-  // uses HEIGHT to create table rows
-  // uses WIDTH to create table cells for each row
   for (let y = 0; y < HEIGHT; y++) {
     const $row = document.createElement('tr');
 

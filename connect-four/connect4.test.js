@@ -33,6 +33,7 @@ describe('makeBoard', function () {
   });
 
   it('makes the in-memory board', function () {
+    console.log("in test file", gameState);
     expect(gameState.board.length).toEqual(HEIGHT);
 
     for (const row of gameState.board) {
