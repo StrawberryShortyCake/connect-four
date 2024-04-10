@@ -33,19 +33,10 @@ function switchCurrPlayer() {
  */
 
 function makeBoard() {
-  console.log("makeBoard Running");
+  console.log("making a board with starter const");
+  gameState.board.fill(Array(WIDTH).fill(null));
 
-  const board = [];
-  const row = Array(WIDTH).fill(null)
-
-  while (board.length < HEIGHT) {
-    board.push(row);
-  }
-
-  console.log("makeBoard", board);
-  return board;
 }
-
 
 /** findSpotInCol: given column x, return y coordinate of furthest-down spot
  *    (return null if filled)
