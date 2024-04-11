@@ -76,9 +76,13 @@ function handleClick(evt) {
 
   // place piece in board
   // TODO: add line to update `board` state with new piece
+  gameState.board[y][x] = gameState.currPlayer;
+
 
   // add to HTML table
   placeInTable(y, x);
+
+  console.log("board", gameState.board);
 
   // check for win
   if (checkForWin()) {
@@ -89,6 +93,7 @@ function handleClick(evt) {
   // TODO: check if all cells in board are filled; if so, call endGame
 
   // TODO: switch players
+
 }
 
 
