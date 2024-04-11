@@ -31,10 +31,6 @@ function makeBoard() {
   }
 }
 
-// makeBoard();
-// console.log(gameState);
-
-
 /** findSpotInCol: given column x, return y coordinate of furthest-down spot */
 
 function findSpotInCol(x) {
@@ -42,7 +38,7 @@ function findSpotInCol(x) {
 
   const lastMoveIndex = gameState.board.findIndex((row) => row[x] !== null);
 
-  switch(lastMoveIndex) {
+  switch (lastMoveIndex) {
     case -1:
       return gameState.board.length - 1;
     case 0:

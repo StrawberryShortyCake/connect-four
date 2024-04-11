@@ -44,9 +44,14 @@ function makeHtmlBoard() {
 
 
 /** placeInTable: update DOM to place piece into HTML table of board */
-
 function placeInTable(y, x) {
-  // TODO: make a div and insert into correct table cell
+  console.log("placing a piece in the board with coordinates: ", y, x);
+  const cell = document.querySelector(`#c-${y}-${x}`);
+  const piece = document.createElement("div");
+
+  piece.className = `piece player-${gameState.currPlayer}-piece`;
+
+  cell.appendChild(piece);
 }
 
 
